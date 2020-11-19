@@ -24,6 +24,10 @@ c is the number of channels in each split, which is defined by FLAGS.block_unit_
 
 To play with these hyper-parameters, you could either change inside the hyper-parameters.py or use the following commands:
 ```
+python cifar10_train.py 
+```
+or 
+```
 python cifar10_train.py --version='test',num_resnext_blocks=3,cardinality=4
 ```
 More explanations about the hyper-parameters can be found [here](https://github.com/wenxinxu/resnet-in-tensorflow#hyper-parameters)
