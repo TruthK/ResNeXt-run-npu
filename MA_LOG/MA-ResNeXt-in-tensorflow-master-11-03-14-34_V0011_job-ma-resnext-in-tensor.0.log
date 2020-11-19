@@ -1,0 +1,47 @@
+mkdir: cannot create directory ‘logs’: File exists
+[ModelArts Service Log]modelarts-pipe: will create log file /tmp/log/MA-ResNeXt-in-tensorflow-master-11-03-14-34.log
+[ModelArts Service Log]modelarts-pipe: will create log file /tmp/log/MA-ResNeXt-in-tensorflow-master-11-03-14-34.log
+[ModelArts Service Log]modelarts-pipe: will write log file /tmp/log/MA-ResNeXt-in-tensorflow-master-11-03-14-34.log
+[ModelArts Service Log]modelarts-pipe: param for max log length: 1073741824
+[ModelArts Service Log]modelarts-pipe: param for whether exit on overflow: 0
+[ModelArts Service Log]modelarts-pipe: total length: 1396
+do nothing
+[Modelarts Service Log]user: uid=1101(work) gid=1101(work) groups=1101(work)
+[Modelarts Service Log]pwd: /home/work
+[Modelarts Service Log]app_url: s3://resnext-tk/MA-ResNeXt-in-tensorflow-master-11-03-14-34/code/
+[Modelarts Service Log]boot_file: code/cifar10_train.py
+[Modelarts Service Log]log_url: /tmp/log/MA-ResNeXt-in-tensorflow-master-11-03-14-34.log
+[Modelarts Service Log]command: code/cifar10_train.py --data_url=s3://resnext-tk/ResNeXt-in-tensorflow-master/cifar10_data/cifar-10-batches-py/ --train_url=s3://resnext-tk/MA-ResNeXt-in-tensorflow-master-11-03-14-34/output/V0011/ --num_gpus=1
+[Modelarts Service Log]MODELARTS_IPOIB_DEVICE: 
+[Modelarts Service Log]dependencies_file_dir: /home/work/user-job-dir/code
+[Modelarts Service Log][modelarts_create_log] modelarts-pipe found
+[Modelarts Service Log]handle inputs of training job
+INFO:root:Using MoXing-v1.17.3-4c644d5b
+INFO:root:Using OBS-Python-SDK-3.20.7
+[ModelArts Service Log][INFO][2020/11/03 17:05:15]: env MA_INPUTS is not found, skip the inputs handler
+INFO:root:Using MoXing-v1.17.3-4c644d5b
+INFO:root:Using OBS-Python-SDK-3.20.7
+[ModelArts Service Log]2020-11-03 17:05:16,070 - modelarts-downloader.py[line:619] - INFO: Main: modelarts-downloader starting with Namespace(dst='./', recursive=True, skip_creating_dir=False, src='s3://resnext-tk/MA-ResNeXt-in-tensorflow-master-11-03-14-34/code/', trace=False, type='common', verbose=False)
+/home/work/user-job-dir
+[Modelarts Service Log][modelarts_logger] modelarts-pipe found
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+['cifar10_data/cifar-10-batches-py/data_batch_1', 'cifar10_data/cifar-10-batches-py/data_batch_2', 'cifar10_data/cifar-10-batches-py/data_batch_3', 'cifar10_data/cifar-10-batches-py/data_batch_4', 'cifar10_data/cifar-10-batches-py/data_batch_5']
+Reading images from cifar10_data/cifar-10-batches-py/data_batch_1
+Traceback (most recent call last):
+  File "code/cifar10_train.py", line 420, in <module>
+    train.train()
+  File "code/cifar10_train.py", line 83, in train
+    all_data, all_labels = prepare_train_data(padding_size=FLAGS.padding_size)
+  File "/cache/user-job-dir/code/cifar10_input.py", line 172, in prepare_train_data
+    data, label = read_in_all_images(path_list, is_random_label=TRAIN_RANDOM_LABEL)
+  File "/cache/user-job-dir/code/cifar10_input.py", line 91, in read_in_all_images
+    batch_data, batch_label = _read_one_batch(address, is_random_label)
+  File "/cache/user-job-dir/code/cifar10_input.py", line 62, in _read_one_batch
+    fo = open(path, 'rb')
+FileNotFoundError: [Errno 2] No such file or directory: 'cifar10_data/cifar-10-batches-py/data_batch_1'
+[Modelarts Service Log]Training end with return code: 1
+[Modelarts Service Log]Training completed.

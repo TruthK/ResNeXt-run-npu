@@ -1,0 +1,74 @@
+mkdir: cannot create directory ‘logs’: File exists
+[ModelArts Service Log]modelarts-pipe: will create log file /tmp/log/MA-ResNeXt-in-tensorflow-master-11-03-14-34.log
+do nothing
+[Modelarts Service Log]user: uid=1101(work) gid=1101(work) groups=1101(work)
+[Modelarts Service Log]pwd: /home/work
+[Modelarts Service Log]app_url: s3://resnext-tk/MA-ResNeXt-in-tensorflow-master-11-03-14-34/code/
+[Modelarts Service Log]boot_file: code/cifar10_train.py
+[Modelarts Service Log]log_url: /tmp/log/MA-ResNeXt-in-tensorflow-master-11-03-14-34.log
+[Modelarts Service Log]command: code/cifar10_train.py --data_url=s3://resnext-tk/ResNeXt-in-tensorflow-master/cifar10_data/cifar-10-batches-py/ --train_url=s3://resnext-tk/MA-ResNeXt-in-tensorflow-master-11-03-14-34/output/V0006/ --num_gpus=1
+[Modelarts Service Log]MODELARTS_IPOIB_DEVICE: 
+[Modelarts Service Log]dependencies_file_dir: /home/work/user-job-dir/code
+[Modelarts Service Log][modelarts_create_log] modelarts-pipe found
+[Modelarts Service Log]handle inputs of training job
+INFO:root:Using MoXing-v1.17.3-4c644d5b
+INFO:root:Using OBS-Python-SDK-3.20.7
+[ModelArts Service Log][INFO][2020/11/03 15:33:06]: env MA_INPUTS is not found, skip the inputs handler
+INFO:root:Using MoXing-v1.17.3-4c644d5b
+INFO:root:Using OBS-Python-SDK-3.20.7
+[ModelArts Service Log]2020-11-03 15:33:07,063 - modelarts-downloader.py[line:619] - INFO: Main: modelarts-downloader starting with Namespace(dst='./', recursive=True, skip_creating_dir=False, src='s3://resnext-tk/MA-ResNeXt-in-tensorflow-master-11-03-14-34/code/', trace=False, type='common', verbose=False)
+[ModelArts Service Log]modelarts-pipe: will create log file /tmp/log/MA-ResNeXt-in-tensorflow-master-11-03-14-34.log
+[ModelArts Service Log]modelarts-pipe: will write log file /tmp/log/MA-ResNeXt-in-tensorflow-master-11-03-14-34.log
+[ModelArts Service Log]modelarts-pipe: param for max log length: 1073741824
+[ModelArts Service Log]modelarts-pipe: param for whether exit on overflow: 0
+/home/work/user-job-dir
+[Modelarts Service Log][modelarts_logger] modelarts-pipe found
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+Traceback (most recent call last):
+  File "/home/work/anaconda/lib/python3.6/urllib/request.py", line 1318, in do_open
+    encode_chunked=req.has_header('Transfer-encoding'))
+  File "/home/work/anaconda/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/home/work/anaconda/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/home/work/anaconda/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/home/work/anaconda/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/home/work/anaconda/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/home/work/anaconda/lib/python3.6/http/client.py", line 936, in connect
+    (self.host,self.port), self.timeout, self.source_address)
+  File "/home/work/anaconda/lib/python3.6/socket.py", line 724, in create_connection
+    raise err
+  File "/home/work/anaconda/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+During handling of the above exception, another exception occurred:
+Traceback (most recent call last):
+  File "code/cifar10_train.py", line 416, in <module>
+    maybe_download_and_extract()
+  File "/cache/user-job-dir/code/cifar10_input.py", line 45, in maybe_download_and_extract
+    filepath, _ = urllib.request.urlretrieve(DATA_URL, filepath, _progress)
+  File "/home/work/anaconda/lib/python3.6/urllib/request.py", line 248, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "/home/work/anaconda/lib/python3.6/urllib/request.py", line 223, in urlopen
+    return opener.open(url, data, timeout)
+  File "/home/work/anaconda/lib/python3.6/urllib/request.py", line 526, in open
+    response = self._open(req, data)
+  File "/home/work/anaconda/lib/python3.6/urllib/request.py", line 544, in _open
+    '_open', req)
+  File "/home/work/anaconda/lib/python3.6/urllib/request.py", line 504, in _call_chain
+    result = func(*args)
+  File "/home/work/anaconda/lib/python3.6/urllib/request.py", line 1346, in http_open
+    return self.do_open(http.client.HTTPConnection, req)
+  File "/home/work/anaconda/lib/python3.6/urllib/request.py", line 1320, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 110] Connection timed out>
+[Modelarts Service Log]Training end with return code: 1
+[Modelarts Service Log]Training completed.
+[ModelArts Service Log]modelarts-pipe: total length: 2806
