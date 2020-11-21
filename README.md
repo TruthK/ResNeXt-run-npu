@@ -51,3 +51,5 @@ More explanations about the hyper-parameters can be found [here](https://github.
 
     b. Use the queueRunner in tensorflow as data I/O and implement data augmentaion
 
+## THE TRAINING RESULTS:
+![avatar]()
