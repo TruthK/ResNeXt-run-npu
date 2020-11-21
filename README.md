@@ -57,4 +57,4 @@ the training results log:
 ![log](https://raw.githubusercontent.com/TruthK/ResNeXt-run-npu/master/figure/traing_result_log.png)
 the training results model:
 
-![model](https://raw.githubusercontent.com/TruthK/ResNeXt-run-npu/master/figure/traing_result_log.png)
+![model](https://raw.githubusercontent.com/TruthK/ResNeXt-run-npu/master/figure/the_model.png)
