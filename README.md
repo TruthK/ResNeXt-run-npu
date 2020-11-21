@@ -52,4 +52,9 @@ More explanations about the hyper-parameters can be found [here](https://github.
     b. Use the queueRunner in tensorflow as data I/O and implement data augmentaion
 
 ## THE TRAINING RESULTS:
-![avatar]()
+the training results log:
+
+![log](https://raw.githubusercontent.com/TruthK/ResNeXt-run-npu/master/figure/traing_result_log.png)
+the training results model:
+
+![model](https://raw.githubusercontent.com/TruthK/ResNeXt-run-npu/master/figure/traing_result_log.png)
